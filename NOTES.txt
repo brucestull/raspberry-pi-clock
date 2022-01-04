@@ -1,0 +1,9 @@
+-Created a seperate loop to set 'segments' and 'digits' as 'GPIO.OUT'
+
+-Need to cycle display between two different 4-digit numbers
+
+-Use some 'interrupt' to switch between any number of 4-digit numbers.
+
+-To multiplex two different numbers on the display, will need to figure out how to interrupt one loop (if looping is used) to start the loop for the new number.
+
+-Add power transistors to inputs. Use pin for signal and transistor to power the LED. Will this increase brightness of segments when multiplexing?
