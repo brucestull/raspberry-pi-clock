@@ -10,7 +10,7 @@
 - `Segment74Clear.py`
 - `Segments.py`
 
-## Automated-Testing-Capaable Modules
+## Automated-Testing-Capable Modules
 
 - `Multiplex.py`
 - `DisplayTime.py`
