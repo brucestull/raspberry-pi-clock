@@ -4,7 +4,7 @@
 
 from time import sleep
 
-import Draw
+import draw
 
 # ===============================================================================
 
@@ -38,19 +38,19 @@ while True:
 
 #    print(Tyme)
 
-    Draw.DisplayClear()
+    draw.DisplayClear()
 
     sleep(TimeDelay)
-    Draw.Display(1,tymeH)
+    draw.Display(1,tymeH)
     sleep(TimeDisplay)
 
-    Draw.Display(2,tymeh)
+    draw.Display(2,tymeh)
     sleep(TimeDisplay)
 
-    Draw.Display(3,tymeM)
+    draw.Display(3,tymeM)
     sleep(TimeDisplay)
 
-    Draw.Display(4,tymem)
+    draw.Display(4,tymem)
     sleep(TimeDisplay)
     
 # =============================================================================
