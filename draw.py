@@ -11,12 +11,12 @@ import RPi.GPIO as GPIO		# Import 'RPi.GPIO' module as 'GPIO'.
 GPIO.setmode(GPIO.BCM)          # Set pin mode to BCM
 GPIO.setwarnings(False)         # Suppress display of warnings
 
-import Segments		# Import 'Segments' and 'Digits' modules
+import segment_pins		# Import 'segment_pins' and 'Digits' modules
 import Digits		# These provide pin to segment/digit mapping
 
 # ===============================================================================
 
-for segment in Segments.segments:	# Set both 'segment' and 'digit' pins as GPIO.OUT.
+for segment in segment_pins.segments:	# Set both 'segment' and 'digit' pins as GPIO.OUT.
     GPIO.setup(segment,GPIO.OUT)	# Only need to do this once.
 for digit in Digits.digits:		# Used to do this multiple times with each:
     GPIO.setup(digit,GPIO.OUT)		# 'def Zero()' etc
@@ -24,60 +24,60 @@ for digit in Digits.digits:		# Used to do this multiple times with each:
 # ===============================================================================
 
 def DisplayClear():	# Reset display by making input Lo and output Hi. No segments display.
-    for segment in Segments.segments:
+    for segment in segment_pins.segments:
         GPIO.output(segment,False)
     for digit in Digits.digits:
         GPIO.output(digit,True)
 
 # ===============================================================================
-# ToDo: Is there a way to loop and compact 'Segments' and 'Digits' sections?
+# ToDo: Is there a way to loop and compact 'segment_pins' and 'Digits' sections?
 # ===============================================================================
 
 # ===============================================================================
-# 'Segments' loop
+# 'segment_pins' loop
 
 def Decimal():
-    for segment in Segments.Decimal:
+    for segment in segment_pins.Decimal:
         GPIO.output(segment,True)
 
 def Zero():
-    for segment in Segments.Zero:
+    for segment in segment_pins.Zero:
         GPIO.output(segment,True)
 
 def One():
-    for segment in Segments.One:
+    for segment in segment_pins.One:
         GPIO.output(segment,True)
 
 def Two():
-    for segment in Segments.Two:
+    for segment in segment_pins.Two:
         GPIO.output(segment,True)
 
 def Three():
-    for segment in Segments.Three:
+    for segment in segment_pins.Three:
         GPIO.output(segment,True)
 
 def Four():
-    for segment in Segments.Four:
+    for segment in segment_pins.Four:
         GPIO.output(segment,True)
 
 def Five():
-    for segment in Segments.Five:
+    for segment in segment_pins.Five:
         GPIO.output(segment,True)
 
 def Six():
-    for segment in Segments.Six:
+    for segment in segment_pins.Six:
         GPIO.output(segment,True)
 
 def Seven():
-    for segment in Segments.Seven:
+    for segment in segment_pins.Seven:
         GPIO.output(segment,True)
 
 def Eight():
-    for segment in Segments.Eight:
+    for segment in segment_pins.Eight:
         GPIO.output(segment,True)
 
 def Nine():
-    for segment in Segments.Nine:
+    for segment in segment_pins.Nine:
         GPIO.output(segment,True)
 
 # ===============================================================================

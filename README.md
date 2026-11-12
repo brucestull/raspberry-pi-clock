@@ -8,7 +8,7 @@
 - `draw.py`
 - `Digits.py`
 - `Segment74Clear.py`
-- `Segments.py`
+- `segment_pins.py`
 
 ## Automated-Testing-Capable Modules
 
