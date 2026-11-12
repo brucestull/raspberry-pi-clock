@@ -37,43 +37,43 @@ def DisplayClear():	# Reset display by making input Lo and output Hi. No segment
 # 'segment_pins' loop
 
 def Decimal():
-    for segment in segment_pins.Decimal:
+    for segment in segment_pins.decimal:
         GPIO.output(segment,True)
 
 def Zero():
-    for segment in segment_pins.Zero:
+    for segment in segment_pins.zero:
         GPIO.output(segment,True)
 
 def One():
-    for segment in segment_pins.One:
+    for segment in segment_pins.one:
         GPIO.output(segment,True)
 
 def Two():
-    for segment in segment_pins.Two:
+    for segment in segment_pins.two:
         GPIO.output(segment,True)
 
 def Three():
-    for segment in segment_pins.Three:
+    for segment in segment_pins.three:
         GPIO.output(segment,True)
 
 def Four():
-    for segment in segment_pins.Four:
+    for segment in segment_pins.four:
         GPIO.output(segment,True)
 
 def Five():
-    for segment in segment_pins.Five:
+    for segment in segment_pins.five:
         GPIO.output(segment,True)
 
 def Six():
-    for segment in segment_pins.Six:
+    for segment in segment_pins.six:
         GPIO.output(segment,True)
 
 def Seven():
-    for segment in segment_pins.Seven:
+    for segment in segment_pins.seven:
         GPIO.output(segment,True)
 
 def Eight():
-    for segment in segment_pins.Eight:
+    for segment in segment_pins.eight:
         GPIO.output(segment,True)
 
 def Nine():
