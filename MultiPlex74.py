@@ -4,7 +4,7 @@
 
 from time import sleep
 
-import draw		# Don't need to import 'segment_pins' and 'Digits'.
+import draw		# Don't need to import 'segment_pins' and 'digit_pins'.
 			# 'draw' already imported them.
 
 timelapse = .25

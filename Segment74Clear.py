@@ -3,14 +3,17 @@
 # The "digit" pin goes low and the "segment" pin goes hi to drive the segment
 
 import RPi.GPIO as GPIO
+
 from time import sleep
+
+from segment_pins import segments
+
 GPIO.setmode(GPIO.BCM)		# Set pin mode to BCM
 #
 GPIO.setwarnings(False)
 #
 digits = [2,3,4,17]
-segments = [16,21,19,6,5,26,20,13]
-#
+
 for digit in digits:
     GPIO.setup(digit,GPIO.OUT)		# Set digits to output
 for segment in segments:

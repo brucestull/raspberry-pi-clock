@@ -6,7 +6,7 @@
 ## Hardware-Control Modules (Modules which interface with `RPi.GPIO`)
 
 - `draw.py`
-- `Digits.py`
+- `digit_pins.py`
 - `Segment74Clear.py`
 - `segment_pins.py`
 

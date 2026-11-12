@@ -11,14 +11,14 @@ import RPi.GPIO as GPIO		# Import 'RPi.GPIO' module as 'GPIO'.
 GPIO.setmode(GPIO.BCM)          # Set pin mode to BCM
 GPIO.setwarnings(False)         # Suppress display of warnings
 
-import segment_pins		# Import 'segment_pins' and 'Digits' modules
-import Digits		# These provide pin to segment/digit mapping
+import segment_pins		# Import 'segment_pins' and 'digit_pins' modules
+import digit_pins		# These provide pin to segment/digit mapping
 
 # ===============================================================================
 
 for segment in segment_pins.segments:	# Set both 'segment' and 'digit' pins as GPIO.OUT.
     GPIO.setup(segment,GPIO.OUT)	# Only need to do this once.
-for digit in Digits.digits:		# Used to do this multiple times with each:
+for digit in digit_pins.digits:		# Used to do this multiple times with each:
     GPIO.setup(digit,GPIO.OUT)		# 'def Zero()' etc
 
 # ===============================================================================
@@ -26,11 +26,11 @@ for digit in Digits.digits:		# Used to do this multiple times with each:
 def DisplayClear():	# Reset display by making input Lo and output Hi. No segments display.
     for segment in segment_pins.segments:
         GPIO.output(segment,False)
-    for digit in Digits.digits:
+    for digit in digit_pins.digits:
         GPIO.output(digit,True)
 
 # ===============================================================================
-# ToDo: Is there a way to loop and compact 'segment_pins' and 'Digits' sections?
+# ToDo: Is there a way to loop and compact 'segment_pins' and 'digit_pins' sections?
 # ===============================================================================
 
 # ===============================================================================
@@ -81,22 +81,22 @@ def Nine():
         GPIO.output(segment,True)
 
 # ===============================================================================
-# 'Digits' loop
+# 'digit_pins' loop
 
 def PlaceOne():
-    for digit in Digits.One:
+    for digit in digit_pins.One:
         GPIO.output(digit,False)
 
 def PlaceTwo():
-    for digit in Digits.Two:
+    for digit in digit_pins.Two:
         GPIO.output(digit,False)
 
 def PlaceThree():
-    for digit in Digits.Three:
+    for digit in digit_pins.Three:
         GPIO.output(digit,False)
 
 def PlaceFour():
-    for digit in Digits.Four:
+    for digit in digit_pins.Four:
         GPIO.output(digit,False)
 
 # ===============================================================================
