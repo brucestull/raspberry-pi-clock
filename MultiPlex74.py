@@ -14,6 +14,6 @@ timedelay = .001
 # ===============================================================================
 
 for i in range(10):
-    draw.Display(1,i)
+    draw.display(1,i)
     sleep(timelapse)
-draw.DisplayClear()
+draw.display_clear()

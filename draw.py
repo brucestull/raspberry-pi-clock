@@ -23,7 +23,7 @@ for digit in digit_pins.digits:		# Used to do this multiple times with each:
 
 # ===============================================================================
 
-def DisplayClear():	# Reset display by making input Lo and output Hi. No segments display.
+def display_clear():	# Reset display by making input Lo and output Hi. No segments display.
     for segment in segment_pins.segments:
         GPIO.output(segment,False)
     for digit in digit_pins.digits:
@@ -36,103 +36,103 @@ def DisplayClear():	# Reset display by making input Lo and output Hi. No segment
 # ===============================================================================
 # 'segment_pins' loop
 
-def Decimal():
+def decimal():
     for segment in segment_pins.decimal:
         GPIO.output(segment,True)
 
-def Zero():
+def zero():
     for segment in segment_pins.zero:
         GPIO.output(segment,True)
 
-def One():
+def one():
     for segment in segment_pins.one:
         GPIO.output(segment,True)
 
-def Two():
+def two():
     for segment in segment_pins.two:
         GPIO.output(segment,True)
 
-def Three():
+def three():
     for segment in segment_pins.three:
         GPIO.output(segment,True)
 
-def Four():
+def four():
     for segment in segment_pins.four:
         GPIO.output(segment,True)
 
-def Five():
+def five():
     for segment in segment_pins.five:
         GPIO.output(segment,True)
 
-def Six():
+def six():
     for segment in segment_pins.six:
         GPIO.output(segment,True)
 
-def Seven():
+def seven():
     for segment in segment_pins.seven:
         GPIO.output(segment,True)
 
-def Eight():
+def eight():
     for segment in segment_pins.eight:
         GPIO.output(segment,True)
 
-def Nine():
-    for segment in segment_pins.Nine:
+def nine():
+    for segment in segment_pins.nine:
         GPIO.output(segment,True)
 
 # ===============================================================================
 # 'digit_pins' loop
 
-def PlaceOne():
-    for digit in digit_pins.One:
+def place_one():
+    for digit in digit_pins.one:
         GPIO.output(digit,False)
 
-def PlaceTwo():
-    for digit in digit_pins.Two:
+def place_two():
+    for digit in digit_pins.two:
         GPIO.output(digit,False)
 
-def PlaceThree():
-    for digit in digit_pins.Three:
+def place_three():
+    for digit in digit_pins.three:
         GPIO.output(digit,False)
 
-def PlaceFour():
-    for digit in digit_pins.Four:
+def place_four():
+    for digit in digit_pins.four:
         GPIO.output(digit,False)
 
 # ===============================================================================
 # Loop to map symbol-numbers to word-numbers.
 
-def Display(Position,Number):
-    DisplayClear()
-    if Number == 0:
-        Zero()
-    if Number == 1:
-        One()
-    if Number == 2:
-        Two()
-    if Number == 3:
-        Three()
-    if Number == 4:
-        Four()
-    if Number == 5:
-        Five()
-    if Number == 6:
-        Six()
-    if Number == 7:
-        Seven()
-    if Number == 8:
-        Eight()
-    if Number == 9:
-        Nine()
+def display(position,number):
+    display_clear()
+    if number == 0:
+        zero()
+    if number == 1:
+        one()
+    if number == 2:
+        two()
+    if number == 3:
+        three()
+    if number == 4:
+        four()
+    if number == 5:
+        five()
+    if number == 6:
+        six()
+    if number == 7:
+        seven()
+    if number == 8:
+        eight()
+    if number == 9:
+        nine()
 
-    if Position == 1:
-        PlaceOne()
-    if Position == 2:
-        PlaceTwo()
-    if Position == 3:
-        PlaceThree()
-    if Position == 4:
-        PlaceFour()
+    if position == 1:
+        place_one()
+    if position == 2:
+        place_two()
+    if position == 3:
+        place_three()
+    if position == 4:
+        place_four()
 
 # ===============================================================================
 #

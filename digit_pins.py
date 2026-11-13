@@ -18,7 +18,7 @@
 
 digits = [2,3,4,17]
 
-One = [2]
-Two = [3]
-Three = [4]
-Four = [17]
+one = [2]
+two = [3]
+three = [4]
+four = [17]
